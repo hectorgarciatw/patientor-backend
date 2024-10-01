@@ -1,5 +1,5 @@
 import express from "express";
-import diaryService from "../services/diaryService"; // Asegúrate de que la ruta sea correcta
+import diaryService from "../services/diaryService";
 
 const router = express.Router();
 
@@ -8,7 +8,7 @@ router.get("/", (_req, res) => {
 });
 
 router.post("/", (_req, res) => {
-    res.send("Saving a diary!"); // Aquí puedes implementar la lógica para guardar el diario
+    res.send("Saving a diary!");
 });
 
 export default router;
