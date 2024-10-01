@@ -1,0 +1,26 @@
+{
+    "name": "patientor",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "tsc": "tsc",
+        "dev": "ts-node-dev index.ts",
+        "lint": "eslint --ext .ts .",
+        "start": "node build/index.js"
+    },
+    "author": "hrgarcia",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "@typescript-eslint/eslint-plugin": "^8.8.0",
+        "@typescript-eslint/parser": "^8.8.0",
+        "eslint": "^9.11.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.6.2"
+    },
+    "dependencies": {
+        "express": "^4.21.0"
+    }
+}
