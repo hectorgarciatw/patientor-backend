@@ -1,14 +1,23 @@
+import { Patient, NonSensitivePatient, NewPatient } from "../types";
 import data from "../data/patients";
-import { Patient } from "../types";
+import { v4 as uuid } from "uuid";
 
-// Define the patient without ssn
-export type NonSensitivePatient = Omit<Patient, "ssn">;
+const patients: Patient[] = data;
 
-// Get all the patients without ssnnsibles
 const getNonSensitivePatients = (): NonSensitivePatient[] => {
-    return data.map(({ ssn, ...rest }) => rest);
+    return patients.map(({ ssn, ...rest }) => rest);
+};
+
+const addPatient = (newPatient: NewPatient): Patient => {
+    const patient: Patient = {
+        ...newPatient,
+        id: uuid(),
+    };
+    patients.push(patient);
+    return patient;
 };
 
 export default {
     getNonSensitivePatients,
+    addPatient,
 };
