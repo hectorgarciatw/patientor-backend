@@ -24,10 +24,11 @@ export enum Gender {
 export interface Patient {
     id: string;
     name: string;
-    dateOfBirth: string;
     ssn: string;
-    gender: Gender;
     occupation: string;
+    gender: Gender;
+    dateOfBirth: string;
+    entries?: DiaryEntry[];
 }
 
 //Interface for diagnoses
@@ -37,5 +38,5 @@ export interface Diagnose {
     latin?: string;
 }
 
-export type NonSensitivePatient = Omit<Patient, "ssn">;
+export type NonSensitivePatient = Omit<Patient, "ssn" | "entries">;
 export type NewPatient = Omit<Patient, "id">;
