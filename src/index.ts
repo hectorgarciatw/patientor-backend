@@ -19,5 +19,5 @@ app.use("/api/diaries", diaryRoutes);
 app.use("/api/patients", patientsRouter);
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port http://localhost:${PORT}`);
 });
